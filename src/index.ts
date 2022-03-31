@@ -1,3 +1,6 @@
+// The starting point of your microservice. This file creates an instance of your application, runs the booter,
+// then attempts to start the RestServer instance bound to the application.
+
 import {ApplicationConfig, TodoListApplication} from './application';
 
 export * from './application';
