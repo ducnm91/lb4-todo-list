@@ -1,7 +1,8 @@
 {
   "ids": {
     "Todo": 6,
-    "TodoList": 4
+    "TodoList": 5,
+    "TodoListImage": 4
   },
   "models": {
     "Todo": {
@@ -14,7 +15,11 @@
     "TodoList": {
       "1": "{\"title\":\"Sith lord's check list\",\"color\":\"blue\",\"id\":1}",
       "2": "{\"title\":\"My daily chores\",\"color\":\"red\",\"id\":2}",
-      "3": "{\"title\":\"grocery list\",\"id\":3}"
+      "3": "{\"title\":\"grocery list\",\"id\":3}",
+      "4": "{\"title\":\"test image\",\"id\":4}"
+    },
+    "TodoListImage": {
+      "1": "{\"value\":\"image url\",\"todoListId\":4,\"id\":1}"
     }
   }
 }
