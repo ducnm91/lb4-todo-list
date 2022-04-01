@@ -1,3 +1,4 @@
+import {authenticate} from '@loopback/authentication';
 import {
   Count,
   CountSchema,
@@ -14,6 +15,8 @@ import {
 import {Todo, TodoList} from '../models';
 import {TodoRepository} from '../repositories';
 
+// If there are particular API that you want to make it available to everyone without authentication, you can add @authenticate.skip() before that function
+@authenticate('jwt')
 export class TodoController {
   constructor(
     @repository(TodoRepository)

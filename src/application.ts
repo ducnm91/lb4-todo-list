@@ -2,6 +2,10 @@
 // This is the root of your application, and is where your application will be configured.
 // It also extends RepositoryMixin which defines the datasource.
 
+import {AuthenticationComponent} from '@loopback/authentication';
+import {
+  JWTAuthenticationComponent, UserServiceBindings
+} from '@loopback/authentication-jwt';
 import {BootMixin} from '@loopback/boot';
 import {ApplicationConfig} from '@loopback/core';
 import {RepositoryMixin} from '@loopback/repository';
@@ -12,6 +16,7 @@ import {
 } from '@loopback/rest-explorer';
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
+import {DbDataSource} from './datasources';
 import {MySequence} from './sequence';
 
 export {ApplicationConfig};
@@ -44,5 +49,12 @@ export class TodoListApplication extends BootMixin(
         nested: true,
       },
     };
+
+    // Mount authentication system
+    this.component(AuthenticationComponent);
+    // Mount jwt component
+    this.component(JWTAuthenticationComponent);
+    // Bind datasource
+    this.dataSource(DbDataSource, UserServiceBindings.DATASOURCE_NAME);
   }
 }

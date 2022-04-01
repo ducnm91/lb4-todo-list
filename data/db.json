@@ -2,7 +2,9 @@
   "ids": {
     "Todo": 6,
     "TodoList": 5,
-    "TodoListImage": 4
+    "TodoListImage": 4,
+    "User": 2,
+    "UserCredentials": 2
   },
   "models": {
     "Todo": {
@@ -20,6 +22,12 @@
     },
     "TodoListImage": {
       "1": "{\"value\":\"image url\",\"todoListId\":4,\"id\":1}"
+    },
+    "User": {
+      "2a41db3a-3a46-4954-afb3-66fa6599835d": "{\"id\":\"2a41db3a-3a46-4954-afb3-66fa6599835d\",\"email\":\"testuser2@abc.com\"}"
+    },
+    "UserCredentials": {
+      "5e294a63-d977-47c7-9598-0f97e9b7c1ff": "{\"id\":\"5e294a63-d977-47c7-9598-0f97e9b7c1ff\",\"password\":\"$2a$10$FL0LqX/RymesVYvfif1tCu3Lkn65Hf4co2W0rsFVczi9EhMkQGcWu\",\"userId\":\"2a41db3a-3a46-4954-afb3-66fa6599835d\"}"
     }
   }
 }
